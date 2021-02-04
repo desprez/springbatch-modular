@@ -1,6 +1,6 @@
 # springbatch-modular
 
-springbatch-modular springboot application demo who demonstrate usage of modular batch with tests
+springbatch-modular springboot application demo who demonstrate usage of modular batch with tests @EnableBatchProcessing(modular = true).
 
 2 jobs
 - DummyJob1Config
