@@ -65,6 +65,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>springbatch-modular</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

@@ -1,4 +1,4 @@
-package fr.training.springbatch;
+package fr.training.springbatch.app.job;
 
 import javax.sql.DataSource;
 
@@ -7,8 +7,6 @@ import org.springframework.batch.test.JobLauncherTestUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
 @Configuration
 @EnableBatchProcessing
@@ -24,12 +22,13 @@ public class BatchTestConfiguration {
 		return new JdbcTemplate(dataSource);
 	}
 
-	@Bean
-	public DataSource dataSource() {
-		return new EmbeddedDatabaseBuilder() //
-				.setType(EmbeddedDatabaseType.H2) //
-				.addScript("classpath:org/springframework/batch/core/schema-drop-h2.sql")
-				.addScript("classpath:org/springframework/batch/core/schema-h2.sql").build();
-	}
+	//	@Bean
+	//	public DataSource dataSource() {
+	//		return new EmbeddedDatabaseBuilder() //
+	//				.setType(EmbeddedDatabaseType.H2) //
+	//				.addScript("classpath:org/springframework/batch/core/schema-drop-h2.sql")
+	//				.addScript("classpath:org/springframework/batch/core/schema-h2.sql") //
+	//				.build();
+	//	}
 
 }

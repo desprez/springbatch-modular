@@ -1,4 +1,4 @@
-package fr.training.springbatch;
+package fr.training.springbatch.app.job;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
@@ -15,9 +15,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import fr.training.springbatch.app.job.DummyJob2Config;
+
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = { DummyJob1Config.class, BatchTestConfiguration.class })
-public class DummyJob1ConfigTest {
+@SpringBootTest(classes = { DummyJob2Config.class, BatchTestConfiguration.class })
+public class DummyJob2ConfigTest {
 
 	@Autowired
 	private JobLauncherTestUtils testUtils;
@@ -34,7 +36,7 @@ public class DummyJob1ConfigTest {
 		// When
 		final JobExecution jobExec = testUtils.launchJob(jobParameters);
 		// Then
-		assertThat(jobExec.getJobInstance().getJobName(), equalTo("dummy-job-1"));
+		assertThat(jobExec.getJobInstance().getJobName(), equalTo("dummy-job-2"));
 		assertThat(jobExec.getStatus(), equalTo(BatchStatus.COMPLETED));
 	}
 }
