@@ -40,7 +40,7 @@ public class ModularBatchApplication {
 		if (StringUtils.isEmpty(jobName)) {
 			logger.error("Missing job name");
 			logger.warn(
-					"Usage : \n\tjava -Dspring.batch.job.names=dummy-job-2 -jar springbatch-modular.jar parameter1=value1 parameter2=value2 ...\n");
+					"Usage : \n\tjava -Dspring.batch.job.names=dummy-job-1 -jar springbatch-modular.jar parameter1=value1 parameter2=value2 ...\n");
 		}
 	}
 
