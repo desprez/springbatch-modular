@@ -10,6 +10,9 @@ import org.springframework.context.annotation.Bean;
 
 import fr.training.springbatch.app.commons.AbstractJobConfiguration;
 
+/**
+ * Simple job configuration to illustrate modular = true
+ */
 public class DummyJob2Config extends AbstractJobConfiguration {
 
 	@Bean

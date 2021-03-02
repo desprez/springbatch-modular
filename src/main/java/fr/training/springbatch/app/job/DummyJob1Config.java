@@ -25,7 +25,7 @@ public class DummyJob1Config extends AbstractJobConfiguration {
 				.build();
 	}
 
-	@Bean
+	@Bean(name="dummyJob1")
 	public Job getJob() {
 		return jobBuilderFactory.get("dummy-job-1") //
 				.start(step()) //

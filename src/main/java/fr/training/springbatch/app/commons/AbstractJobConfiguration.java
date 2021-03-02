@@ -5,6 +5,9 @@ import org.springframework.batch.core.configuration.annotation.StepBuilderFactor
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 
+/**
+ * Base configuration for all jobs (ie define Listener used for all jobs)
+ */
 public abstract class AbstractJobConfiguration {
 
 	@Autowired
