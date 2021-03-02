@@ -7,5 +7,5 @@ spring:
     password:
  
   batch:
-    enabled: true  
+    enabled: false  
     initialize-schema: always
