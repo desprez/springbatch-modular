@@ -9,3 +9,7 @@ spring:
   batch:
     enabled: false  
     initialize-schema: always
+    
+logging:
+  level:
+    org.springframework.beans: debug    

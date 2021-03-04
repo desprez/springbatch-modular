@@ -15,3 +15,6 @@ logging:
   level:
     fr.training.springbatch: info
     org.springframework.batch: info
+    
+service:
+  message: Hello, World
